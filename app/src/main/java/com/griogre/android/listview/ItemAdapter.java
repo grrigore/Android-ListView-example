@@ -52,23 +52,29 @@ public class ItemAdapter extends BaseAdapter {
         Item currentItem = (Item) getItem(position);
 
 
-        viewHolder.column1.setText(currentItem.getColumn1());
-        viewHolder.column2.setText(currentItem.getColumn2());
-        viewHolder.column3.setText(currentItem.getColumn3());
+        viewHolder.position.setText(currentItem.getPosition());
+        viewHolder.team.setText(currentItem.getTeam());
+        viewHolder.matchesPlayed.setText(currentItem.getMatchesPlayed());
+        viewHolder.goals.setText(currentItem.getGoals());
+        viewHolder.points.setText(currentItem.getPoints());
 
         return convertView;
     }
 
     public static class ViewHolder {
-        TextView column1;
-        TextView column2;
-        TextView column3;
+        TextView position;
+        TextView team;
+        TextView matchesPlayed;
+        TextView goals;
+        TextView points;
 
 
         public ViewHolder(View convertView) {
-            column1 = convertView.findViewById(R.id.text_column1);
-            column2 = convertView.findViewById(R.id.text_column2);
-            column3 = convertView.findViewById(R.id.text_column3);
+            position = convertView.findViewById(R.id.text_position);
+            team = convertView.findViewById(R.id.text_team);
+            matchesPlayed = convertView.findViewById(R.id.text_matchesPlayed);
+            goals = convertView.findViewById(R.id.text_goals);
+            points = convertView.findViewById(R.id.text_points);
         }
     }
 }

@@ -6,39 +6,71 @@ package com.griogre.android.listview;
 
 public class Item {
 
-    private String column1;
-    private String column2;
-    private String column3;
+    private String position;
+    private String team;
+    private String matchesPlayed;
+    private String goals;
+    private String points;
 
-    public Item(){}
-
-    public Item(String column1, String column2, String column3) {
-        this.column1 = column1;
-        this.column2 = column2;
-        this.column3 = column3;
+    public Item() {
     }
 
-    public String getColumn1() {
-        return column1;
+    public Item(String position, String team, String matchesPlayed, String goals, String points) {
+        this.position = position;
+        this.team = team;
+        this.matchesPlayed = matchesPlayed;
+        this.goals = goals;
+        this.points = points;
     }
 
-    public void setColumn1(String column1) {
-        this.column1 = column1;
+    public String getPosition() {
+        return position;
     }
 
-    public String getColumn2() {
-        return column2;
+    public String getTeam() {
+        return team;
     }
 
-    public void setColumn2(String column2) {
-        this.column2 = column2;
+    public String getMatchesPlayed() {
+        return matchesPlayed;
     }
 
-    public String getColumn3() {
-        return column3;
+    public String getGoals() {
+        return goals;
     }
 
-    public void setColumn3(String column3) {
-        this.column3 = column3;
+    public String getPoints() {
+        return points;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
+    public void setTeam(String team) {
+        this.team = team;
+    }
+
+    public void setMatchesPlayed(String matchesPlayed) {
+        this.matchesPlayed = matchesPlayed;
+    }
+
+    public void setGoals(String goals) {
+        this.goals = goals;
+    }
+
+    public void setPoints(String points) {
+        this.points = points;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "position='" + position + '\'' +
+                ", team='" + team + '\'' +
+                ", matchesPlayed='" + matchesPlayed + '\'' +
+                ", goals='" + goals + '\'' +
+                ", points='" + points + '\'' +
+                '}';
     }
 }

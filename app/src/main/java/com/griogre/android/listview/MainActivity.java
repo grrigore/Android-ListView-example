@@ -14,22 +14,33 @@ public class MainActivity extends AppCompatActivity {
     Context context = MainActivity.this;
     ArrayList myList = new ArrayList();
 
-    String[] column1 = new String[]{
-            "item1Column1", "item2Column1","item3Column1",
-            "item4Column1", "item5Column1", "item6Column1"
+    String[] position = new String[]{
+            "1", "2", "3",
+            "4", "5", "6"
     };
 
 
-    String[] column2 = new String[]{
-            "item1Column2", "item2Column2","item3Column2",
-            "item4Column2", "item5Column2", "item6Column2"
+    String[] team = new String[]{
+            "Manchester City", "Arsenal", "Manchester United",
+            "Crystal Palace", "Liverpool", "Chelsea"
     };
 
 
-    String[] column3 = new String[]{
-            "item1Column3", "item2Column3","item3Column3",
-            "item4Column3", "item5Column3", "item6Column3"
+    String[] matchesPlayed = new String[]{
+            "12", "12", "12",
+            "12", "12", "12"
     };
+
+    String[] goals = new String[]{
+            "50", "41", "3",
+            "13", "36", "5"
+    };
+
+    String[] points = new String[]{
+            "50", "41", "33",
+            "23", "16", "5"
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +55,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getDataInList() {
-        for (int i = 0; i < column1.length; i++){
+        for (int i = 0; i < position.length; i++) {
             Item item = new Item();
-            item.setColumn1(column1[i]);
-            item.setColumn2(column2[i]);
-            item.setColumn3(column3[i]);
+            item.setPosition(position[i]);
+            item.setTeam(team[i]);
+            item.setMatchesPlayed(matchesPlayed[i]);
+            item.setGoals(goals[i]);
+            item.setPoints(points[i]);
 
             myList.add(item);
         }
